@@ -4,6 +4,11 @@ A machine learning based web application for predicting diabetes risk using pati
 
 The project combines exploratory data analysis, feature engineering, model training, threshold optimization, explainable AI, and interactive deployment using Streamlit.
 
+## Live Demo
+
+Streamlit Application:  
+https://diabetes-disease-prediction-model-test.streamlit.app/
+
 ---
 
 # Project Overview
