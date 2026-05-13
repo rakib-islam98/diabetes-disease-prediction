@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 import shap
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # ==========================================
 # PAGE CONFIG
@@ -27,12 +28,13 @@ st.write(
 # ==========================================
 # LOAD MODEL + DATA
 # ==========================================
+BASE_DIR = Path(__file__).resolve().parent
 
-model = joblib.load("./models/catboost_diabetes_model.pkl")
+model = joblib.load(BASE_DIR / "models" / "catboost_diabetes_model.pkl")
 
-threshold = joblib.load("./models/threshold.pkl")
+threshold = joblib.load(BASE_DIR / "models" / "threshold.pkl")
 
-test_data = pd.read_csv("./data/test_data.csv")
+test_data = pd.read_csv(BASE_DIR / "data" / "test_data.csv")
 
 # SHAP Explainer
 explainer = shap.TreeExplainer(model)
